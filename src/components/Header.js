@@ -1,17 +1,18 @@
 import React from "react"
+import Navigation from "./Navigation"
 import { Link } from "gatsby"
+import styles from "./Header.module.css"
 
-export default () => {
-  return (
-    <header>
-      <div className="container">
-        <nav aria-label="navigation">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </div>
-    </header>
-  )
-}
+export default () => (
+  <header className={styles.header}>
+    <div
+      className={`container container--max-width ${styles.header__container}`}
+    >
+      <Link to="/" className={styles.header__logo}>
+        Yordan Ramchev
+      </Link>
+
+      <Navigation />
+    </div>
+  </header>
+)
