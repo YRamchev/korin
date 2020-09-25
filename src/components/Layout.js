@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./Header"
 import "normalize.css"
-import "./layout.css"
+import "./Layout.css"
 
 export default ({ children }) => (
   <section className="page-wrapper">
