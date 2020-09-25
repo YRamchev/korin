@@ -6,5 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Inter`,
+            variants: [`400`, `500`, `600`],
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+  ],
 }

@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding: calc(var(--gutter) * 5) 0;
 }
 
 .home__title {

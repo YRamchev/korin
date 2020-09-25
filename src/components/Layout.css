@@ -47,7 +47,7 @@ a.link:before {
   height: 1px;
   width: 0;
   display: block;
-  background: #06bcc1;
+  background: var(--color-primary);
   transition: all 0.2s ease-in-out;
 }
 
@@ -58,12 +58,19 @@ a.link:hover:before {
 .btn {
   display: inline-flex;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: 1px solid var(--color-text);
   color: #363636;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
-  padding: var(--gutter);
+  padding: calc(var(--gutter) / 1.5) var(--gutter);
   border-radius: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
