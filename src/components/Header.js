@@ -1,14 +1,12 @@
 import React from "react"
 import Navigation from "./Navigation"
 import { Link } from "gatsby"
-import styles from "./Header.module.css"
+import "./Header.css"
 
 export default () => (
-  <header className={styles.header}>
-    <div
-      className={`container container--max-width ${styles.header__container}`}
-    >
-      <Link to="/" className={styles.header__logo}>
+  <header className="header">
+    <div className="container container--max-width header__container">
+      <Link to="/" className="header__logo">
         Yordan Ramchev
       </Link>
 

@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+.nav__item + .nav__item {
+  margin-top: 0;
+}
+
 .nav__link {
   display: inline-block;
   padding: var(--gutter);
@@ -35,11 +39,11 @@
 }
 
 .nav__link:hover:before,
-.active:before {
+.nav__link--active:before {
   width: calc(100% - var(--gutter) * 2);
 }
 
 .nav__link:hover,
-.active {
+.nav__link--active {
   color: var(--color-primary);
 }

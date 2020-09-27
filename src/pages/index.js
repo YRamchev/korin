@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
-import styles from "./index.module.css"
+import "./index.css"
 import { Helmet } from "react-helmet"
 
 export default () => {
@@ -10,8 +10,8 @@ export default () => {
       <Helmet title="Home - Yordan Ramchev" defer={false} />
 
       <Layout>
-        <section className={`container container--max-width ${styles.home}`}>
-          <h1 className={styles.home__title}>
+        <section className="container container--max-width home">
+          <h1 className="home__title">
             Hey, I am{" "}
             <Link to="/about" className="link">
               Yordan Ramchev

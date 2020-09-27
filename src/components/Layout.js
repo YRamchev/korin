@@ -4,8 +4,8 @@ import "normalize.css"
 import "./Layout.css"
 
 export default ({ children }) => (
-  <section className="page-wrapper">
+  <div className="page-wrapper">
     <Header />
     <main>{children}</main>
-  </section>
+  </div>
 )

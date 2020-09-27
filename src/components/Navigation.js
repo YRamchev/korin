@@ -1,42 +1,38 @@
 import React from "react"
 import { Link } from "gatsby"
-import styles from "./Navigation.module.css"
+import "./Navigation.css"
 
 export default () => (
-  <nav className={styles.nav} aria-label="navigation">
-    <ul className={styles.nav__list}>
-      <li className={styles.nav__item}>
-        <Link
-          to="/"
-          className={styles.nav__link}
-          activeClassName={styles.active}
-        >
+  <nav className="nav" aria-label="navigation">
+    <ul className="nav__list">
+      <li className="nav__item">
+        <Link to="/" className="nav__link" activeClassName="nav__link--active">
           Home
         </Link>
       </li>
-      <li className={styles.nav__item}>
+      <li className="nav__item">
         <Link
           to="/about"
-          className={styles.nav__link}
-          activeClassName={styles.active}
+          className="nav__link"
+          activeClassName="nav__link--active"
         >
           About
         </Link>
       </li>
-      <li className={styles.nav__item}>
+      <li className="nav__item">
         <Link
           to="/projects"
-          className={styles.nav__link}
-          activeClassName={styles.active}
+          className="nav__link"
+          activeClassName="nav__link--active"
         >
           Projects
         </Link>
       </li>
-      <li className={styles.nav__item}>
+      <li className="nav__item">
         <Link
           to="/contact"
-          className={styles.nav__link}
-          activeClassName={styles.active}
+          className="nav__link"
+          activeClassName="nav__link--active"
         >
           Contact
         </Link>
