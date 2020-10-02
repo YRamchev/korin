@@ -21,11 +21,11 @@ export default () => (
       </li>
       <li className="nav__item">
         <Link
-          to="/projects"
+          to="/experience"
           className="nav__link"
           activeClassName="nav__link--active"
         >
-          Projects
+          Experience
         </Link>
       </li>
       <li className="nav__item">

@@ -7,7 +7,8 @@ export default () => {
     <>
       <Helmet title="Projects - Yordan Ramchev" defer={false} />
       <Layout>
-        <section className="container container--max-width">Projects</section>
+        <section className="container container--max-width">MentorMate</section>
+        <section className="container container--max-width">Webnotize</section>
       </Layout>
     </>
   )
