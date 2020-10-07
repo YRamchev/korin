@@ -14,12 +14,12 @@
 }
 
 .nav__link {
-  display: inline-block;
+  display: block;
   padding: var(--gutter);
   letter-spacing: 1.2px;
   text-decoration: none;
   color: var(--color-text);
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.2s ease-in-out;
   font-weight: 500;
   position: relative;
@@ -30,7 +30,7 @@
   position: absolute;
   left: var(--gutter);
   right: var(--gutter);
-  bottom: calc(var(--gutter) / 1.5);
+  bottom: calc(var(--gutter));
   height: 1px;
   width: 0;
   display: block;

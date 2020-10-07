@@ -12,15 +12,6 @@ export default () => (
       </li>
       <li className="nav__item">
         <Link
-          to="/about"
-          className="nav__link"
-          activeClassName="nav__link--active"
-        >
-          About
-        </Link>
-      </li>
-      <li className="nav__item">
-        <Link
           to="/experience"
           className="nav__link"
           activeClassName="nav__link--active"
@@ -28,6 +19,16 @@ export default () => (
           Experience
         </Link>
       </li>
+      <li className="nav__item">
+        <Link
+          to="/about"
+          className="nav__link"
+          activeClassName="nav__link--active"
+        >
+          About
+        </Link>
+      </li>
+
       <li className="nav__item">
         <Link
           to="/contact"

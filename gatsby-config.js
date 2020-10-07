@@ -18,6 +18,15 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        icon: `src/assets/images/logo.svg`,
+      },
+    },
     "gatsby-plugin-react-helmet",
   ],
 }

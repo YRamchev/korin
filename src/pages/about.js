@@ -18,13 +18,13 @@ export default () => {
             businesses which helped me to build and expand the skill sets that
             would define my career.
           </p>
-          <p>
+          {/* <p>
             I've collaborated on great products for ... You could check them{" "}
             <Link to="/projects" className="link">
               here
             </Link>
             .
-          </p>
+          </p> */}
 
           <h1>Skills and tools</h1>
           <h2>Coding</h2>
