@@ -2,12 +2,37 @@
   padding-top: var(--gutter);
   padding-bottom: var(--gutter);
   border-top: 1px solid #f1f1f1;
-}
-
-.footer h2 {
-  color: #fff;
+  text-align: center;
 }
 
 .footer__copyright {
   margin-top: calc(var(--gutter) / 3);
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.footer h3 {
+  margin-bottom: calc(var(--gutter) / 3);
+}
+
+.footer__mail {
+  margin-bottom: var(--gutter);
+}
+
+.footer__social {
+  margin-bottom: var(--gutter);
+}
+
+.footer__social a {
+  font-size: 1.8rem;
+  padding: calc(var(--gutter) / 4) calc(var(--gutter) / 2);
+  color: var(--text-color);
+}
+
+.footer__social a:hover svg {
+  transition: color 0.2s ease-in-out;
+}
+
+.footer__social a:hover svg {
+  color: var(--color-primary);
 }

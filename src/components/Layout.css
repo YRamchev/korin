@@ -64,18 +64,22 @@ a.link:hover:before {
 .btn {
   display: inline-flex;
   text-transform: uppercase;
-  font-size: 1.2rem;
-  color: #fff;
-  background: var(--color-text);
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
   padding: calc(var(--gutter) / 1.5) var(--gutter);
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
+  border: none;
 }
 
-.btn:hover {
+.btn--primary {
+  color: #fff;
+  background: var(--color-text);
+}
+
+.btn--primary:hover {
   color: #ffffff;
   background: var(--color-primary);
   border-color: var(--color-primary);
@@ -102,18 +106,26 @@ p + h2 {
   margin-top: calc(var(--gutter) * 3);
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.5;
+  margin-top: 0;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2.5rem;
-  line-height: 1.5;
-  margin-top: 0;
 }
 
 h2 {
   font-size: 1.4rem;
   font-weight: 400;
-  line-height: 1.5;
-  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 li + li {
@@ -129,6 +141,7 @@ li + li {
 .grid-halves > div:last-child {
   padding: calc(var(--gutter) * 2);
 }
+
 .grid-halves > div:first-child {
   display: flex;
   flex-direction: column;
@@ -151,4 +164,39 @@ li + li {
     padding-left: calc(var(--gutter) / 3);
     padding-right: calc(var(--gutter) / 3);
   }
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: none;
+  padding: calc(var(--gutter) / 1.5) var(--gutter);
+  border: 1px solid var(--color-text);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.field textarea {
+  resize: none;
+}
+
+.field label {
+  display: block;
+}
+
+.field__label {
+  margin-bottom: calc(var(--gutter) / 6);
+  color: var(--color-text);
+}
+
+.field + .field {
+  margin-top: var(--gutter);
+}
+
+.mt-24 {
+  margin-top: var(--gutter);
 }

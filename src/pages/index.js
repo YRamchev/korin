@@ -19,7 +19,7 @@ export default () => {
               </Link>
               , <br /> a Frontend developer living in Varna Bulgaria.
             </h1>
-            <Link to="/experience" className="btn">
+            <Link to="/experience" className="btn btn--primary">
               Checkout my work
             </Link>
           </div>
