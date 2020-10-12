@@ -1,11 +1,11 @@
-import React, { useEfect, useMemo } from "react"
+import React, { useState, useMemo } from "react"
 import Layout from "../components/Layout"
 import { Helmet } from "react-helmet"
 
 export default () => {
-  const [name, setName] = useEfect("")
-  const [email, setEmail] = useEfect("")
-  const [message, setMessage] = useEfect("")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
 
   const contact = useMemo(() => {
     return {
