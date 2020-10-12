@@ -16,7 +16,8 @@ export default () => {
   }, [name, email, message])
 
   const handleSubmit = e => {
-    console.log(contact)
+    e.preventDefault()
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -24,8 +25,6 @@ export default () => {
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
-
-    e.preventDefault()
   }
 
   return (
@@ -36,44 +35,35 @@ export default () => {
         <section className="container container--max-width-sm">
           <h1>Contact me</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            tristique dolor nec quam condimentum rutrum. Sed mattis mattis
-            euismod. Praesent iaculis purus eu magna hendrerit, a faucibus justo
-            elementum. Proin sed eros nec est maximus iaculis. Proin pharetra
-            justo eu convallis gravida. Mauris vestibulum lacinia mi eu blandit.
+            If you have any questions or just want to chat - feel free to write
+            me using the form below or check the <strong>Footer</strong> to add
+            me :)
           </p>
-          <form onSubmit={handleSubmit}>
+
+          <form
+            method="POST"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            name="contact"
+          >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <div className="field">
               <label>
                 <div className="field__label">Your name</div>
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  value={email}
-                  onChange={e => setName(e.target.value)}
-                />
+                <input type="text" placeholder="Your name" name="name" />
               </label>
             </div>
             <div className="field">
               <label>
                 <div className="field__label">Your E-mail</div>
-                <input
-                  type="text"
-                  placeholder="Your E-mail"
-                  value={name}
-                  onChange={e => setEmail(e.target.value)}
-                />
+                <input type="text" placeholder="Your E-mail" name="email" />
               </label>
             </div>
             <div className="field">
               <label>
                 <div className="field__label">Message</div>
-                <textarea
-                  value={message}
-                  onChange={e => setMessage(e.target.value)}
-                >
-                  Message...
-                </textarea>
+                <textarea name="message" defaultValue="message" />
               </label>
             </div>
             <button type="submit" className="btn btn--primary mt-24">
