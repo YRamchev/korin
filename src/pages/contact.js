@@ -1,32 +1,8 @@
-import React, { useState, useMemo } from "react"
+import React from "react"
 import Layout from "../components/Layout"
 import { Helmet } from "react-helmet"
 
 export default () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-
-  const contact = useMemo(() => {
-    return {
-      name: name,
-      email: email,
-      message: message,
-    }
-  }, [name, email, message])
-
-  const handleSubmit = e => {
-    e.preventDefault()
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", contact }),
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error))
-  }
-
   return (
     <>
       <Helmet title="Contact - Yordan Ramchev" defer={false} />
@@ -45,25 +21,36 @@ export default () => {
             netlify-honeypot="bot-field"
             data-netlify="true"
             name="contact"
+            data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <div className="field">
               <label>
                 <div className="field__label">Your name</div>
-                <input type="text" placeholder="Your name" name="name" />
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  name="name"
+                  id="name"
+                />
               </label>
             </div>
             <div className="field">
               <label>
                 <div className="field__label">Your E-mail</div>
-                <input type="text" placeholder="Your E-mail" name="email" />
+                <input
+                  type="text"
+                  placeholder="Your E-mail"
+                  name="email"
+                  id="email"
+                />
               </label>
             </div>
             <div className="field">
               <label>
                 <div className="field__label">Message</div>
-                <textarea name="message" defaultValue="message" />
+                <textarea name="message" defaultValue="message" id="message" />
               </label>
             </div>
             <button type="submit" className="btn btn--primary mt-24">
@@ -74,10 +61,4 @@ export default () => {
       </Layout>
     </>
   )
-}
-
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
 }
