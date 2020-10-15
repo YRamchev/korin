@@ -17,8 +17,9 @@ body {
   min-height: 100vh;
 }
 
-.page-wrapper > main {
+.tl-edges {
   display: flex;
+  overflow: hidden;
   min-height: calc(100vh - 79px);
 }
 

@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 module.exports = {
-  /* Your site config here */
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -45,5 +44,11 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/Layout.js`),
+      },
+    },
   ],
 }

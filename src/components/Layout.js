@@ -7,7 +7,7 @@ import "./Layout.css"
 export default ({ children }) => (
   <div className="page-wrapper">
     <Header />
-    <main>{children}</main>
+    {children}
     <Footer />
   </div>
 )
