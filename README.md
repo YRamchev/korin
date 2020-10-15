@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/56132f1e-97e3-40a1-907b-edc2d9c3a79a/deploy-status)](https://app.netlify.com/sites/vibrant-galileo-19a5ae/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
