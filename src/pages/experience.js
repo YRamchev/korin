@@ -6,7 +6,7 @@ export default () => {
   return (
     <>
       <Helmet title="Projects - Yordan Ramchev" defer={false} />
-      <section className="experience grid-halves container container--max-width">
+      <section className="section experience grid-halves container container--max-width">
         <div className="experience__left">
           <h1>MentorMate</h1>
           <h2>2019-Present</h2>

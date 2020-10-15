@@ -23,6 +23,14 @@ body {
   min-height: calc(100vh - 79px);
 }
 
+.tl-wrapper {
+  display: flex;
+}
+
+.tl-wrapper > .container {
+  flex-grow: 1;
+}
+
 .container {
   padding-left: var(--gutter);
   padding-right: var(--gutter);
@@ -86,7 +94,7 @@ a.link:hover:before {
   border-color: var(--color-primary);
 }
 
-section {
+section.section {
   padding: calc(var(--gutter) * 2) 0;
   width: 100%;
 }

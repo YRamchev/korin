@@ -6,7 +6,7 @@ export default () => {
     <>
       <Helmet title="About - Yordan Ramchev" defer={false} />
 
-      <section className="container container--max-width-sm">
+      <section className="section container container--max-width-sm">
         <h1>A little about myself</h1>
         <p>
           Hey, I am <strong>Yordan Ramchev</strong>, a Frontend developer living

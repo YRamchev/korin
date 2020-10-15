@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "./index.css"
 import { Helmet } from "react-helmet"
 
@@ -8,18 +8,30 @@ export default () => {
     <>
       <Helmet title="Home - Yordan Ramchev" defer={false} />
 
-      <section className="container container--max-width home grid-halves">
+      <section className="section container container--max-width home grid-halves">
         <div className="home__left">
           <h1 className="home__title">
             Hello, <br /> I am{" "}
-            <Link to="/about" className="link">
+            <AniLink
+              cover
+              bg="#fff"
+              direction="up"
+              to="/about"
+              className="link"
+            >
               Yordan Ramchev
-            </Link>
+            </AniLink>
             , <br /> a Frontend developer living in Varna Bulgaria.
           </h1>
-          <Link to="/experience" className="btn btn--primary">
+          <AniLink
+            cover
+            bg="#fff"
+            direction="up"
+            to="/experience"
+            className="btn btn--primary"
+          >
             Checkout my work
-          </Link>
+          </AniLink>
         </div>
         <div className="home__right">right</div>
       </section>

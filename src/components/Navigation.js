@@ -1,6 +1,5 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-
 import "./Navigation.css"
 
 export default () => (
@@ -8,7 +7,9 @@ export default () => (
     <ul className="nav__list">
       <li className="nav__item">
         <AniLink
-          paintDrip
+          cover
+          bg="#fff"
+          direction="up"
           to="/"
           className="nav__link"
           activeClassName="nav__link--active"
@@ -18,7 +19,9 @@ export default () => (
       </li>
       <li className="nav__item">
         <AniLink
-          paintDrip
+          cover
+          bg="#fff"
+          direction="up"
           to="/experience"
           className="nav__link"
           activeClassName="nav__link--active"
@@ -28,7 +31,9 @@ export default () => (
       </li>
       <li className="nav__item">
         <AniLink
-          paintDrip
+          cover
+          bg="#fff"
+          direction="up"
           to="/about"
           className="nav__link"
           activeClassName="nav__link--active"
@@ -39,7 +44,9 @@ export default () => (
 
       <li className="nav__item">
         <AniLink
-          paintDrip
+          cover
+          bg="#fff"
+          direction="up"
           to="/contact"
           className="nav__link"
           activeClassName="nav__link--active"
