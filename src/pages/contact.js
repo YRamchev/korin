@@ -50,7 +50,12 @@ export default () => {
             <div className="field">
               <label>
                 <div className="field__label">Message</div>
-                <textarea name="message" defaultValue="message" id="message" />
+                <textarea
+                  name="message"
+                  placeholder="Your message here..."
+                  id="message"
+                  rows={6}
+                />
               </label>
             </div>
             <button type="submit" className="btn btn--primary mt-24">

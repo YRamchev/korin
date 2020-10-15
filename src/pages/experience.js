@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Helmet } from "react-helmet"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import "./experience.css"
 export default () => {
   return (
@@ -9,11 +10,7 @@ export default () => {
       <Layout>
         <section className="experience grid-halves container container--max-width">
           <div className="experience__left">
-            <h1>
-              <a href="https://mentormate.com" target="_blank" rel="noreferrer">
-                MentorMate
-              </a>
-            </h1>
+            <h1>MentorMate</h1>
             <h2>2019-Present</h2>
             <p>
               Nam vehicula, velit et malesuada dignissim, mi augue posuere
@@ -27,14 +24,14 @@ export default () => {
               maximus, tristique ultrices dui.{" "}
             </p>
             <div>Socials</div>
-            <a
+            <OutboundLink
               className="btn btn--primary"
               href="https://mentormate.com"
               target="_blank"
               rel="noreferrer"
             >
               Visit web site
-            </a>
+            </OutboundLink>
             <div>1/3</div>
           </div>
           <div className="experience__right">Right side</div>
