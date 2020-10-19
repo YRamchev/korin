@@ -17,10 +17,14 @@ body {
   min-height: 100vh;
 }
 
+.page-wrapper > main {
+  min-height: calc(100vh - 79px);
+}
+
 .tl-edges {
   display: flex;
   overflow: hidden;
-  min-height: calc(100vh - 79px);
+  height: 100%;
 }
 
 .tl-wrapper {
