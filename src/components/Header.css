@@ -1,4 +1,11 @@
 .header {
+<<<<<<< HEAD
+=======
+  border-bottom: 1px solid #f1f1f1;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+>>>>>>> 3bbcdbcb9f41e1b021d28836bfd41a42d8072ea0
   background: #fff;
 }
 

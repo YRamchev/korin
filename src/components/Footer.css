@@ -11,6 +11,11 @@
   color: var(--color-text-secondary);
 }
 
+.footer {
+  position: relative;
+  z-index: 9999;
+}
+
 .footer h3 {
   margin-bottom: calc(var(--gutter) / 3);
 }

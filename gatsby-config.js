@@ -3,10 +3,15 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-
 module.exports = {
-  /* Your site config here */
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: process.env.GATSBY_GA_TRACKING_ID,
+      },
+    },
     {
       resolve: "gatsby-plugin-prefetch-google-fonts",
       options: {
@@ -27,6 +32,23 @@ module.exports = {
         icon: `src/assets/images/logo.svg`,
       },
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: process.env.GA_TRACKING_ID, // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-analytics", // default
+          anonymize: true, // default
+          allowAdFeatures: false, // default
+        },
+      },
+    },
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/Layout.js`),
+      },
+    },
   ],
 }
